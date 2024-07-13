@@ -1,0 +1,61 @@
+---
+import Commitollama from '@/assets/commitollama.astro'
+import Gcom from '@/assets/gcom.astro'
+import SnowConeUi from '@/assets/snow-cone-ui.astro'
+import Mahjong from '@/assets/mahjong.astro'
+
+interface Props {
+  id: string
+  title: string
+  subtitle: string
+  body: string
+  href?: string
+}
+
+const { id, href, title, subtitle, body } = Astro.props
+
+const getImage = (id: string) => {
+  switch (id) {
+    case 'commitollama':
+      return Commitollama
+    case 'gcom':
+      return Gcom
+    case 'snow-cone-ui':
+      return SnowConeUi
+    case 'mahjong':
+      return Mahjong
+    default:
+      return Commitollama
+  }
+}
+const Image = getImage(id)
+---
+
+<a
+  href={href}
+  class:list={[
+    'group/card bg-card via-card w-[380px] overflow-hidden rounded-lg border bg-gradient-to-br from-muted/20 to-muted/12',
+    href && 'cursor-pointer',
+  ]}
+>
+  <div
+    class="bg-card flex h-full justify-between transition-colors group-hover/card:bg-transparent"
+  >
+    <div class="flex-[0.6] shrink-0 p-4 pr-2">
+      <header class="mb-2">
+        <h2 class="text-xl font-bold">
+          {title}
+        </h2>
+        <h3 class="text-sm">{subtitle}</h3>
+      </header>
+      <p class="text-muted-foreground">
+        {body}
+      </p>
+    </div>
+    <div
+      class="mt-12 flex-[0.4] origin-top-left translate-x-2 translate-y-1 rotate-6 scale-110 self-end opacity-60 transition-[transform,opacity] duration-200 group-hover/card:translate-x-0 group-hover/card:translate-y-0 group-hover/card:rotate-0 group-hover/card:opacity-100 [&_svg_.highlight]:transition-colors [&_svg_.highlight]:duration-200 group-hover/card:[&_svg_.highlight]:fill-foreground"
+    >
+      <Image />
+    </div>
+  </div>
+</a>

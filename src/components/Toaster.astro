@@ -1,0 +1,84 @@
+<style is:global>
+  .toaster {
+    position: fixed;
+    bottom: 16px;
+    z-index: 50;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .toaster ul.rack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .toaster .toast {
+    max-width: 380px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid hsl(var(--border) / 0.5);
+    background-color: hsl(var(--background));
+    margin-bottom: 8px;
+    box-shadow:
+      0 1px 3px 0 rgba(0, 0, 0, 0.1),
+      0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+    display: flex;
+    align-items: start;
+    gap: 12px;
+  }
+
+  .toaster .icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+
+    &.success {
+      color: rgb(34 197 94);
+    }
+
+    &.warning {
+      color: rgb(234 179 8);
+    }
+
+    &.error {
+      color: rgb(239 68 68);
+    }
+
+    &.info {
+      color: rgb(59 130 246);
+    }
+  }
+
+  .toastUp {
+    animation: slideUp 0.25s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  .fadeOutToast {
+    animation: fadeOut 0.25s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(100%) scale(0.2);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+</style>

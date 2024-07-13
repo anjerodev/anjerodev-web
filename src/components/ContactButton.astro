@@ -1,0 +1,70 @@
+---
+import config from '@/lib/site-config'
+import Icons from '@/icons'
+---
+
+<button
+  class="group fixed bottom-4 right-4 flex h-12 w-full max-w-12 shrink-0 items-center justify-end gap-3 overflow-hidden rounded-full bg-accent px-3 text-accent-foreground transition-[transform,max-width] duration-300 active:scale-95"
+>
+  <span
+    id="email"
+    data-state="hidden"
+    class="pl-1 text-sm font-medium group-hover:inline-block group-hover:duration-300 group-hover:animate-in group-hover:fade-in group-hover:slide-in-from-right-10 data-[state=hidden]:hidden data-[state=hidding]:duration-300 data-[state=hidding]:animate-out data-[state=hidding]:fade-out"
+  >
+    {config.email}
+  </span>
+  <span class="relative flex size-6 shrink-0 items-center justify-center">
+    <Icons.mail
+      class="opacity-100 transition-[opacity,transform] duration-500 group-hover:scale-0 group-hover:opacity-0"
+    />
+    <Icons.copy
+      class="absolute scale-0 opacity-0 transition-[opacity,transform] duration-500 group-hover:scale-100 group-hover:opacity-100"
+    />
+  </span>
+</button>
+
+<script>
+  import { toast } from '@/functions/toast'
+  const $button = document.querySelector('button')
+  if ($button) {
+    const $content = document.querySelector('#email')
+
+    if ($content) {
+      const handleMouseOver = () => {
+        $content.removeAttribute('data-state')
+
+        const contentWidth = (
+          $content.getBoundingClientRect().width +
+          12 +
+          24 +
+          24
+        ).toFixed(1)
+        $button.style.maxWidth = `${contentWidth}px`
+      }
+
+      const handleMouseOut = () => {
+        $button.style.maxWidth = '48px'
+        $content.setAttribute('data-state', 'hidding')
+
+        setTimeout(() => {
+          $content.setAttribute('data-state', 'hidden')
+        }, 300)
+      }
+
+      const copyEmail = () => {
+        if ($content.textContent) {
+          toast.add({
+            message: 'Email copied to clipboard',
+            severity: 'success',
+          })
+          return navigator.clipboard.writeText($content.textContent.trim())
+        }
+      }
+
+      $button.addEventListener('mouseenter', handleMouseOver)
+      $button.addEventListener('mouseleave', handleMouseOut)
+
+      $button.addEventListener('click', copyEmail)
+    }
+  }
+</script>

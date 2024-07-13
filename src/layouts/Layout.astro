@@ -1,13 +1,26 @@
 ---
+import '@fontsource/geist-sans/400.css'
+import '@fontsource/geist-sans/500.css'
+import '@fontsource/geist-sans/600.css'
+import '@fontsource/geist-sans/700.css'
+import '@fontsource/geist-mono/400.css'
+import '@fontsource/geist-mono/500.css'
+import '@fontsource/geist-mono/600.css'
+import '@fontsource/geist-mono/700.css'
+
+import '@/styles/global.css'
+
+import ThemeSwitcher from '@/components/ThemeSwitcher.astro'
+
 interface Props {
-  title?: string;
-  description?: string;
+  title?: string
+  description?: string
 }
 
 const {
-  title = "Antonio J. Rodríguez - Web Developer",
-  description = "Personal web page of Antonio Jesús Rodríguez, full stack javascript developer.",
-} = Astro.props;
+  title = 'Antonio J. Rodríguez - Web Developer',
+  description = 'Personal web page of Antonio Jesús Rodríguez, full stack javascript developer.',
+} = Astro.props
 ---
 
 <!doctype html>
@@ -20,35 +33,7 @@ const {
     <title>{title}</title>
   </head>
   <body>
+    <ThemeSwitcher />
     <slot />
   </body>
 </html>
-<style is:global>
-  :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background: #13151a;
-    background-size: 224px;
-  }
-  body {
-    margin: 0;
-  }
-  * {
-    box-sizing: border-box;
-  }
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-  }
-</style>

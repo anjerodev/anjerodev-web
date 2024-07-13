@@ -1,0 +1,88 @@
+---
+interface Props {
+  className?: string
+}
+
+const { className } = Astro.props
+---
+
+<div
+  class:list={[
+    'group relative rounded-full bg-muted-foreground p-px text-muted-foreground transition-colors before:absolute before:inset-0 before:rounded-full before:bg-[hsl(var(--tech-color))] before:opacity-0 before:transition-opacity hover:bg-transparent hover:text-[hsl(var(--tech-color))] hover:before:opacity-100',
+    className,
+  ]}
+>
+  <div
+    class="relative inline-flex select-none items-center rounded-full bg-background px-4 py-1 before:absolute before:inset-0 before:rounded-full before:transition-colors group-hover:border-transparent group-hover:before:bg-[hsl(var(--tech-color)/0.1)]"
+  >
+    <span>
+      <slot />
+    </span>
+  </div>
+</div>
+
+<style>
+  .javascript {
+    --tech-color: 52 83% 63%;
+  }
+  .typescript {
+    --tech-color: 211 60% 48%;
+  }
+  .deno {
+    --tech-color: 0 0% 100%;
+  }
+  .node {
+    --tech-color: 103 48% 52%;
+    &::before {
+      background: linear-gradient(to right, #6cc04a, #41873f);
+    }
+  }
+  .react {
+    --tech-color: 195 81% 43%;
+  }
+  .next {
+    --tech-color: 0 0% 100%;
+  }
+  .astro {
+    --tech-color: 280 76% 42%;
+    &::before {
+      background: linear-gradient(to right, #1321ac, #881abd);
+    }
+  }
+  .tailwind {
+    --tech-color: 199 94% 60%;
+  }
+  .supabase {
+    --tech-color: 153 59% 55%;
+  }
+  .firebase {
+    --tech-color: 10 86% 47%;
+  }
+  .cloudflare {
+    --tech-color: 27 91% 56%;
+  }
+  .turso {
+    --tech-color: 166 92% 66%;
+  }
+  .drizzle {
+    --tech-color: 78 91% 65%;
+  }
+  .sqlite {
+    --tech-color: 197 74% 73%;
+    &::before {
+      background: linear-gradient(to right, #89d0ed, #3b91d5);
+    }
+  }
+  .postgresql {
+    --tech-color: 207 44% 40%;
+  }
+  .mongo {
+    --tech-color: 145 99% 46%;
+  }
+  .css {
+    --tech-color: 207 44% 40%;
+  }
+  .html {
+    --tech-color: 18 86% 55%;
+  }
+</style>

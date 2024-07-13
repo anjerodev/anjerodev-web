@@ -1,22 +1,118 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '@/layouts/Layout.astro'
+
+import SocialButton from '@/components/SocialButton.astro'
+import Chip from '@/components/Chip.astro'
+import ContactButton from '@/components/ContactButton.astro'
+import Toaster from '@/components/Toaster.astro'
+
+import Icons from '@/icons'
+
+import config from '@/lib/site-config'
+import LabCard from '@/components/LabCard.astro'
 ---
 
 <Layout>
   <main>
-    <p>Web in development...</p>
+    <div class="border-b">
+      <div class="container grid h-8 grid-cols-3">
+        <div class="border-x"></div>
+        <div class="border-r"></div>
+        <div class="border-r"></div>
+      </div>
+    </div>
+    <header class="border-b">
+      <div class="container grid grid-cols-3">
+        <div
+          class="col-span-3 border-x border-b px-12 py-10 lg:col-span-2 lg:border-b-0"
+        >
+          <div class="mb-7 flex items-start justify-between">
+            <h3 class="text-xl font-normal text-muted-foreground">
+              Antonio Jesús Rodríguez
+            </h3>
+            <div class="flex gap-4">
+              <SocialButton
+                href={config.links.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icons.linkedin />
+              </SocialButton>
+              <SocialButton
+                href={config.links.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icons.github />
+              </SocialButton>
+            </div>
+          </div>
+          <h1 class="font-mono text-5xl font-bold">
+            Full Stack <br />
+            <span class="text-accent">JavaScript</span> Developer
+          </h1>
+        </div>
+        <div
+          class="col-span-3 border-x px-12 py-10 lg:col-span-1 lg:border-l-0 lg:border-r"
+        >
+          <h4 class="mb-3 font-mono text-xl">I'm working with</h4>
+          <div class="-ml-2 flex flex-wrap gap-2">
+            {
+              config.technologies.map(({ name, id }) => (
+                <Chip className={id}>{name}</Chip>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="border-b">
+      <div class="container grid grid-cols-3">
+        <div
+          class="col-span-3 grid place-items-center border-x border-b px-12 py-10 lg:col-span-1 lg:border-b-0"
+        >
+          <p class="text-2xl font-medium">
+            I enjoy building things that make a difference, transforming my
+            ideas into tangible projects, and helping others do the same.
+          </p>
+        </div>
+        <div
+          class="col-span-3 overflow-hidden border-x pt-10 lg:col-span-2 lg:border-l-0 lg:border-r"
+        >
+          <div class="flex items-center gap-2 px-12">
+            <Icons.lab class="shrink-0 text-accent" />
+            <h3 class="font-mono text-lg font-bold">LAB</h3>
+          </div>
+          <div
+            class="grid w-full auto-cols-min grid-flow-col grid-rows-2 gap-4 overflow-auto px-12 pb-10 pt-5"
+          >
+            {
+              config.labProjects.map((project) => (
+                <LabCard
+                  id={project.id}
+                  title={project.name}
+                  subtitle={project.subtitle}
+                  body={project.description}
+                  href={project.link}
+                />
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="border-b">
+      <div class="container">
+        <div class="space-y-3 border-x px-12 py-10">
+          <div class="flex items-center gap-2">
+            <Icons.work class="shrink-0 text-accent" />
+            <h3 class="font-mono text-lg font-bold">WORK</h3>
+          </div>
+          <div class="grid grid-cols-3"></div>
+        </div>
+      </div>
+    </section>
+    <ContactButton />
+    <Toaster />
   </main>
 </Layout>
-
-<style>
-  main {
-    padding: 1rem;
-    max-width: 1240px;
-    color: #555d6d;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    min-height: 100dvh;
-    display: grid;
-    place-items: center;
-  }
-</style>

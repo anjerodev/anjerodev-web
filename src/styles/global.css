@@ -1,0 +1,109 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  :root {
+    --accent: 43 93 57;
+    --accent-foreground: 223 16 9;
+
+    --background: 0 0 85;
+    --foreground: 22 16 9;
+    --card: 0 0 85;
+    --muted: 222 13 19;
+    --muted-foreground: 220 12 38;
+    --border: 220 0 85;
+    --scrollbar: 220 0 85;
+  }
+
+  .dark {
+    --accent: 53 93 57;
+    --accent-foreground: 223 16 9;
+
+    --background: 223 16 9;
+    --foreground: 0 0 85;
+    --card: 223 16 9;
+    --muted: 222 13 19;
+    --muted-foreground: 220 12 38;
+    --border: 223 23 21;
+    --scrollbar: 223 23 21;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--scrollbar)) transparent;
+    -webkit-tap-highlight-color: transparent;
+    @apply border-border;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  *::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: hsl(var(--border));
+  }
+
+  html {
+    background: hsl(var(--background));
+  }
+
+  body {
+    color: hsl(var(--foreground));
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
+    min-height: 100dvh;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+
+  img,
+  video,
+  svg {
+    height: auto;
+    max-width: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+      transition: none;
+    }
+  }
+}
