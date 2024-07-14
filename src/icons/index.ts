@@ -8,6 +8,10 @@ import ErrorIcon from './error.svg.astro'
 import Warning from './warning.svg.astro'
 import Info from './info.svg.astro'
 import Work from './work.svg.astro'
+import Using from './using.svg.astro'
+import Quote from './quote.svg.astro'
+import ExternalLink from './external-link.svg.astro'
+import Pin from './pin.svg.astro'
 
 export default {
   linkedin: Linkedin,
@@ -20,4 +24,8 @@ export default {
   error: ErrorIcon,
   warning: Warning,
   info: Info,
+  using: Using,
+  quote: Quote,
+  externalLink: ExternalLink,
+  pin: Pin,
 }

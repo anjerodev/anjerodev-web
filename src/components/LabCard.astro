@@ -3,6 +3,7 @@ import Commitollama from '@/assets/commitollama.astro'
 import Gcom from '@/assets/gcom.astro'
 import SnowConeUi from '@/assets/snow-cone-ui.astro'
 import Mahjong from '@/assets/mahjong.astro'
+import WhatsappBot from '@/assets/whatsapp-bot.astro'
 
 interface Props {
   id: string
@@ -24,6 +25,8 @@ const getImage = (id: string) => {
       return SnowConeUi
     case 'mahjong':
       return Mahjong
+    case 'wbot':
+      return WhatsappBot
     default:
       return Commitollama
   }
@@ -33,13 +36,14 @@ const Image = getImage(id)
 
 <a
   href={href}
+  target="_blank"
   class:list={[
-    'group/card bg-card via-card w-[380px] overflow-hidden rounded-lg border bg-gradient-to-br from-muted/20 to-muted/12',
+    'group/card w-[380px] overflow-hidden rounded-lg border bg-card bg-gradient-to-br from-muted/30 via-card to-muted/30',
     href && 'cursor-pointer',
   ]}
 >
   <div
-    class="bg-card flex h-full justify-between transition-colors group-hover/card:bg-transparent"
+    class="flex h-full justify-between bg-card transition-colors group-hover/card:bg-transparent"
   >
     <div class="flex-[0.6] shrink-0 p-4 pr-2">
       <header class="mb-2">

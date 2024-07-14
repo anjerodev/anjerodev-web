@@ -30,7 +30,7 @@
   }
 
   * {
-    scrollbar-width: thin;
+    /* scrollbar-width: thin; */
     scrollbar-color: hsl(var(--scrollbar)) transparent;
     -webkit-tap-highlight-color: transparent;
     @apply border-border;

@@ -7,7 +7,7 @@ const props = Astro.props
 ---
 
 <a
-  class="ease-[cubic-bezier(0.6,0.6,0, 1)] flex aspect-square h-10 cursor-pointer items-center justify-center rounded-md border border-foreground/10 bg-foreground/3 transition-[background-color,transform] duration-300 hover:scale-95 hover:bg-foreground/5"
+  class="ease-[cubic-bezier(0.6,0.6,0, 1)] flex aspect-square h-10 cursor-pointer items-center justify-center rounded-md border border-border/50 bg-transparent text-muted-foreground transition-[border-color,color,background-color,transform] duration-300 hover:scale-[0.98] hover:border-border hover:bg-muted/50 hover:text-foreground"
   {...props}
 >
   <slot />
