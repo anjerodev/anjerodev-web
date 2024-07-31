@@ -29,6 +29,13 @@ export default {
   ],
   labProjects: [
     {
+      id: 'farfetchd',
+      name: 'Farfetchd',
+      subtitle: 'API testing client',
+      description: 'Simple Good Looking Online API testing client',
+      link: 'https://farfetchd.buildbuddy.one/',
+    },
+    {
       id: 'commitollama',
       name: 'Commitollama',
       subtitle: 'VS Code plugin',
