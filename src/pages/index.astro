@@ -11,8 +11,9 @@ import Icons from '@/icons'
 import config from '@/lib/site-config'
 import LabCard from '@/components/LabCard.astro'
 import Card from '@/components/Card.astro'
+import HorizontalScrollButtons from '@/components/HorizontalScrollButtons.astro'
 
-import WorldMap from '@/assets/world-map.astro'
+import worldMap from '@/assets/world-map.svg?raw'
 ---
 
 <Layout>
@@ -85,7 +86,7 @@ import WorldMap from '@/assets/world-map.astro'
               class="text-muted-foreground transition-colors group-hover/quote:text-foreground"
             >
               I enjoy building things that make a difference, transforming my
-              ideas into tangible projects, and helping others do the same.
+              ideas into tangible projects and helping others do the same.
             </p>
             <Icons.quote
               class="absolute bottom-0 right-0 size-12 translate-x-6 translate-y-4 -rotate-6 text-muted-foreground transition-[color,transform] duration-200 group-hover/quote:rotate-6 group-hover/quote:text-accent"
@@ -103,12 +104,17 @@ import WorldMap from '@/assets/world-map.astro'
             </div>
           </div>
           <!-- Dots bg -->
-          <div class="flex items-center gap-2 px-6 lg:px-12">
-            <Icons.lab class="shrink-0 text-accent" />
-            <h3 class="font-mono text-lg font-bold">LAB</h3>
+          <div class="flex items-start justify-between">
+            <div class="flex items-center gap-2 px-6 lg:px-12">
+              <Icons.lab class="shrink-0 text-accent" />
+              <h3 class="font-mono text-lg font-bold">LAB</h3>
+            </div>
+            <div class="hidden px-6 md:block lg:px-12">
+              <HorizontalScrollButtons />
+            </div>
           </div>
           <div
-            class="grid w-full auto-cols-min grid-flow-col grid-rows-2 gap-4 overflow-auto px-6 pb-10 pt-5 lg:px-12"
+            class="lab-container grid w-full auto-cols-min grid-flow-col grid-rows-2 gap-4 overflow-auto px-6 pb-10 pt-5 lg:px-12"
           >
             {
               config.labProjects.map((project) => (
@@ -182,7 +188,7 @@ import WorldMap from '@/assets/world-map.astro'
               </div>
             </div>
             <!-- Location Pin -->
-            <WorldMap />
+            <Fragment set:html={worldMap} />
           </div>
         </div>
       </div>

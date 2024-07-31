@@ -12,6 +12,8 @@ import Using from './using.svg.astro'
 import Quote from './quote.svg.astro'
 import ExternalLink from './external-link.svg.astro'
 import Pin from './pin.svg.astro'
+import ArrowLeft from './arrow-left.svg.astro'
+import ArrowRight from './arrow-right.svg.astro'
 
 export default {
   linkedin: Linkedin,
@@ -28,4 +30,6 @@ export default {
   quote: Quote,
   externalLink: ExternalLink,
   pin: Pin,
+  arrowLeft: ArrowLeft,
+  arrowRight: ArrowRight,
 }

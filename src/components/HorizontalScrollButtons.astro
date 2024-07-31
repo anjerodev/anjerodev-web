@@ -1,0 +1,47 @@
+---
+import Icons from '@/icons'
+
+const buttonClasses =
+  'ease-[cubic-bezier(0.6,0.6,0, 1)] flex aspect-square h-10 shrink-0 cursor-pointer items-center justify-center rounded-md border border-border/50 bg-transparent text-muted-foreground transition-[border-color,color,background-color,transform] duration-300 hover:scale-[0.98] hover:border-border hover:bg-muted/50 hover:text-foreground active:scale-95'
+---
+
+<div class="flex items-center gap-2">
+  <button data-scroll-left class={buttonClasses}>
+    <Icons.arrowLeft />
+  </button>
+  <button data-scroll-right class={buttonClasses}>
+    <Icons.arrowRight />
+  </button>
+</div>
+
+<script>
+  const $container = document.querySelector('.lab-container')
+  const $rightScrollButton = document.querySelector('[data-scroll-right]')
+  const $leftScrollButton = document.querySelector('[data-scroll-left]')
+
+  if ($container) {
+    var scrollAmount = 0
+    var scrollMin = 0
+    var scrollMax = $container.clientWidth
+
+    if ($rightScrollButton) {
+      $rightScrollButton.addEventListener('click', () => {
+        $container.scrollTo({
+          top: 0,
+          left: Math.max((scrollAmount += 600), scrollMax),
+          behavior: 'smooth',
+        })
+      })
+    }
+
+    if ($leftScrollButton) {
+      $leftScrollButton.addEventListener('click', () => {
+        $container.scrollTo({
+          top: 0,
+          left: Math.min((scrollAmount -= 600), scrollMin),
+          behavior: 'smooth',
+        })
+      })
+    }
+  }
+</script>
