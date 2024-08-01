@@ -1,5 +1,5 @@
 ---
-import Icons from '@/icons'
+import { Icon } from 'astro-icon/components'
 
 interface Props {
   id: string
@@ -32,14 +32,18 @@ const { id, href, title, body, isPrivate } = Astro.props
       {body}
     </p>
   </div>
-  <a
-    href={href || `/projetcs/${id}`}
-    target="_blank"
-    class="flex w-fit items-center gap-3 rounded border border-border/50 bg-transparent px-2 py-1 text-muted-foreground transition-colors duration-200 hover:border-border hover:bg-muted/50 hover:text-foreground hover:shadow-md active:shadow-none"
-  >
-    Go to project
-    {href && <Icons.externalLink class="size-4" />}
-  </a>
+  {
+    !isPrivate && (
+      <a
+        href={href || `/projetcs/${id}`}
+        target="_blank"
+        class="flex w-fit items-center gap-3 rounded border border-border/50 bg-transparent px-2 py-1 text-muted-foreground transition-colors duration-200 hover:border-border hover:bg-muted/50 hover:text-foreground hover:shadow-md active:shadow-none"
+      >
+        Go to project
+        {href && <Icon name="external-link" class="size-4" />}
+      </a>
+    )
+  }
 </div>
 
 <style>

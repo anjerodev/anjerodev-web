@@ -1,6 +1,6 @@
 ---
 import config from '@/lib/site-config'
-import Icons from '@/icons'
+import { Icon } from 'astro-icon/components'
 ---
 
 <button
@@ -15,11 +15,13 @@ import Icons from '@/icons'
     {config.email}
   </span>
   <span class="relative flex size-6 shrink-0 items-center justify-center">
-    <Icons.mail
-      class="opacity-100 transition-[opacity,transform] duration-500 group-hover:scale-0 group-hover:opacity-0"
+    <Icon
+      name="mail"
+      class="size-6 opacity-100 transition-[opacity,transform] duration-500 group-hover:scale-0 group-hover:opacity-0"
     />
-    <Icons.copy
-      class="absolute scale-0 opacity-0 transition-[opacity,transform] duration-500 group-hover:scale-100 group-hover:opacity-100"
+    <Icon
+      name="copy"
+      class="absolute size-6 scale-0 opacity-0 transition-[opacity,transform] duration-500 group-hover:scale-100 group-hover:opacity-100"
     />
   </span>
 </button>

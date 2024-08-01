@@ -5,8 +5,7 @@ import SocialButton from '@/components/SocialButton.astro'
 import Chip from '@/components/Chip.astro'
 import ContactButton from '@/components/ContactButton.astro'
 import Toaster from '@/components/Toaster.astro'
-
-import Icons from '@/icons'
+import { Icon } from 'astro-icon/components'
 
 import config from '@/lib/site-config'
 import LabCard from '@/components/LabCard.astro'
@@ -35,24 +34,29 @@ import worldMap from '@/assets/world-map.svg?raw'
               Antonio Jesús Rodríguez
             </h3>
           </div>
-          <h1 class="mb-10 font-mono text-5xl font-bold">
-            Full Stack <br />
-            <span class="text-accent">JavaScript</span> Developer
-          </h1>
+          <div class="mb-10 space-y-3 font-mono">
+            <h1 class="text-5xl font-bold">
+              Full Stack <br />
+              <span class="text-accent">JavaScript</span> Developer
+            </h1>
+            <h2 class="text-3xl text-muted-foreground">
+              + 5 years of experience
+            </h2>
+          </div>
           <div class="flex gap-4">
             <SocialButton
               href={config.links.linkedin}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Icons.linkedin />
+              <Icon name="linkedin" class="size-6" />
             </SocialButton>
             <SocialButton
               href={config.links.github}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Icons.github />
+              <Icon name="github" class="size-6" />
             </SocialButton>
           </div>
         </div>
@@ -60,7 +64,7 @@ import worldMap from '@/assets/world-map.svg?raw'
           class="col-span-3 space-y-3 border-x px-6 py-10 lg:col-span-1 lg:border-l-0 lg:border-r lg:px-12"
         >
           <div class="flex items-center gap-2">
-            <Icons.using class="shrink-0 text-accent" />
+            <Icon name="using" class="size-6 shrink-0 text-accent" />
             <h3 class="font-mono text-lg font-bold">STACK</h3>
           </div>
           <div class="-ml-2 flex flex-wrap gap-2">
@@ -79,7 +83,8 @@ import worldMap from '@/assets/world-map.svg?raw'
           class="group/quote col-span-3 grid place-items-center border-x border-b px-6 py-10 lg:col-span-1 lg:border-b-0 lg:px-12"
         >
           <div class="relative px-7 text-2xl font-medium">
-            <Icons.quote
+            <Icon
+              name="quote"
               class="absolute left-0 top-0 size-12 -translate-x-6 -translate-y-4 -rotate-6 scale-x-[-1] text-muted-foreground transition-[color,transform] duration-200 group-hover/quote:rotate-6 group-hover/quote:text-accent"
             />
             <p
@@ -88,7 +93,8 @@ import worldMap from '@/assets/world-map.svg?raw'
               I enjoy building things that make a difference, transforming my
               ideas into tangible projects and helping others do the same.
             </p>
-            <Icons.quote
+            <Icon
+              name="quote"
               class="absolute bottom-0 right-0 size-12 translate-x-6 translate-y-4 -rotate-6 text-muted-foreground transition-[color,transform] duration-200 group-hover/quote:rotate-6 group-hover/quote:text-accent"
             />
           </div>
@@ -106,7 +112,7 @@ import worldMap from '@/assets/world-map.svg?raw'
           <!-- Dots bg -->
           <div class="flex items-start justify-between">
             <div class="flex items-center gap-2 px-6 lg:px-12">
-              <Icons.lab class="shrink-0 text-accent" />
+              <Icon name="lab" class="size-6 shrink-0 text-accent" />
               <h3 class="font-mono text-lg font-bold">LAB</h3>
             </div>
             <div class="hidden px-6 md:block lg:px-12">
@@ -143,7 +149,7 @@ import worldMap from '@/assets/world-map.svg?raw'
         <!-- Dots bg -->
         <div class="space-y-3 border-x px-6 py-10 lg:px-12">
           <div class="flex items-center gap-2">
-            <Icons.work class="shrink-0 text-accent" />
+            <Icon name="work" class="size-6 shrink-0 text-accent" />
             <h3 class="font-mono text-lg font-bold">WORK</h3>
           </div>
           <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -166,7 +172,7 @@ import worldMap from '@/assets/world-map.svg?raw'
       <div class="container">
         <div class="space-y-3 border-x px-6 py-10 lg:px-12">
           <div class="flex items-center gap-2">
-            <Icons.pin class="shrink-0 text-accent" />
+            <Icon name="pin" class="size-6 shrink-0 text-accent" />
             <h3 class="font-mono text-lg font-bold">LIVING IN</h3>
           </div>
           <div class="relative mx-auto grid w-fit place-items-center">

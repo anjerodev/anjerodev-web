@@ -1,9 +1,5 @@
 ---
-import Commitollama from '@/assets/commitollama.astro'
-import Gcom from '@/assets/gcom.astro'
-import SnowConeUi from '@/assets/snow-cone-ui.astro'
-import Mahjong from '@/assets/mahjong.astro'
-import WhatsappBot from '@/assets/whatsapp-bot.astro'
+import { Icon } from 'astro-icon/components'
 
 interface Props {
   id: string
@@ -14,24 +10,6 @@ interface Props {
 }
 
 const { id, href, title, subtitle, body } = Astro.props
-
-const getImage = (id: string) => {
-  switch (id) {
-    case 'commitollama':
-      return Commitollama
-    case 'gcom':
-      return Gcom
-    case 'snow-cone-ui':
-      return SnowConeUi
-    case 'mahjong':
-      return Mahjong
-    case 'wbot':
-      return WhatsappBot
-    default:
-      return Commitollama
-  }
-}
-const CardImage = getImage(id)
 ---
 
 <a
@@ -59,7 +37,7 @@ const CardImage = getImage(id)
     <div
       class="mt-12 flex-[0.4] origin-top-left translate-x-2 translate-y-1 rotate-6 scale-110 self-end opacity-60 transition-[transform,opacity] duration-200 group-hover/card:translate-x-0 group-hover/card:translate-y-0 group-hover/card:rotate-0 group-hover/card:opacity-100 [&_svg_.highlight]:transition-colors [&_svg_.highlight]:duration-200 group-hover/card:[&_svg_.highlight]:fill-foreground"
     >
-      <CardImage />
+      <Icon name={`lab/${id}`} height={120} width={160} />
     </div>
   </div>
 </a>
