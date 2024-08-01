@@ -11,8 +11,9 @@
     width="159"
     height="119"
     rx="11.5"
-    fill="#13151A"
-    stroke="#2A3142"></rect>
+    fill="hsl(var(--background))"
+    stroke="hsl(var(--border))"
+  ></rect>
   <rect
     x="17"
     y="18"
@@ -20,7 +21,8 @@
     height="27"
     rx="2"
     fill="#5F687B"
-    fill-opacity="0.3"></rect>
+    fill-opacity="0.3"
+  ></rect>
   <rect
     x="17"
     y="57"
@@ -28,7 +30,8 @@
     height="27"
     rx="2"
     fill="#5F687B"
-    fill-opacity="0.3"></rect>
+    fill-opacity="0.3"
+  ></rect>
   <rect
     x="17"
     y="91"
@@ -36,7 +39,8 @@
     height="8"
     rx="2"
     fill="#5F687B"
-    fill-opacity="0.3"></rect>
+    fill-opacity="0.3"
+  ></rect>
   <rect
     class="highlight"
     x="64"
@@ -44,7 +48,8 @@
     width="33"
     height="27"
     rx="2"
-    fill="#5F687B"></rect>
+    fill="#5F687B"
+  ></rect>
   <rect
     x="64"
     y="57"
@@ -52,7 +57,8 @@
     height="27"
     rx="2"
     fill="#5F687B"
-    fill-opacity="0.3"></rect>
+    fill-opacity="0.3"
+  ></rect>
   <rect
     x="64"
     y="91"
@@ -60,7 +66,8 @@
     height="8"
     rx="2"
     fill="#5F687B"
-    fill-opacity="0.3"></rect>
+    fill-opacity="0.3"
+  ></rect>
   <rect
     x="111"
     y="18"
@@ -68,7 +75,8 @@
     height="27"
     rx="2"
     fill="#5F687B"
-    fill-opacity="0.3"></rect>
+    fill-opacity="0.3"
+  ></rect>
   <rect
     x="111"
     y="57"
@@ -76,7 +84,8 @@
     height="27"
     rx="2"
     fill="#5F687B"
-    fill-opacity="0.3"></rect>
+    fill-opacity="0.3"
+  ></rect>
   <rect
     x="111"
     y="91"
@@ -84,5 +93,6 @@
     height="8"
     rx="2"
     fill="#5F687B"
-    fill-opacity="0.3"></rect>
+    fill-opacity="0.3"
+  ></rect>
 </svg>

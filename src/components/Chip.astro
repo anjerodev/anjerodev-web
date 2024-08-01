@@ -23,13 +23,13 @@ const { className } = Astro.props
 
 <style>
   .js {
-    --tech-color: 52 83% 63%;
+    --tech-color: 43 93% 40%;
   }
   .ts {
     --tech-color: 211 60% 48%;
   }
   .deno {
-    --tech-color: 0 0% 100%;
+    --tech-color: 0 0% 0%;
   }
   .node {
     --tech-color: 103 48% 52%;
@@ -44,7 +44,7 @@ const { className } = Astro.props
     --tech-color: 195 81% 43%;
   }
   .next {
-    --tech-color: 0 0% 100%;
+    --tech-color: 0 0% 0%;
   }
   .astro {
     --tech-color: 280 76% 42%;
@@ -65,13 +65,13 @@ const { className } = Astro.props
     --tech-color: 27 91% 56%;
   }
   .turso {
-    --tech-color: 166 92% 66%;
+    --tech-color: 166 92% 30%;
   }
   .drizzle {
-    --tech-color: 78 91% 65%;
+    --tech-color: 78 91% 30%;
   }
   .sqlite {
-    --tech-color: 197 74% 73%;
+    --tech-color: 197 74% 53%;
     &::before {
       background: linear-gradient(to right, #89d0ed, #3b91d5);
     }
@@ -80,12 +80,45 @@ const { className } = Astro.props
     --tech-color: 207 44% 40%;
   }
   .mongo {
-    --tech-color: 145 99% 46%;
+    --tech-color: 145 99% 30%;
   }
   .css {
     --tech-color: 207 44% 40%;
   }
   .html {
     --tech-color: 18 86% 55%;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .js {
+      --tech-color: 52 83% 63%;
+    }
+    .deno {
+      --tech-color: 0 0% 100%;
+    }
+    .next {
+      --tech-color: 0 0% 100%;
+    }
+    .astro {
+      --tech-color: 280 76% 42%;
+      &::before {
+        background: linear-gradient(to right, #1321ac, #881abd);
+      }
+    }
+    .turso {
+      --tech-color: 166 92% 66%;
+    }
+    .drizzle {
+      --tech-color: 78 91% 65%;
+    }
+    .sqlite {
+      --tech-color: 197 74% 73%;
+      &::before {
+        background: linear-gradient(to right, #89d0ed, #3b91d5);
+      }
+    }
+    .mongo {
+      --tech-color: 145 99% 46%;
+    }
   }
 </style>

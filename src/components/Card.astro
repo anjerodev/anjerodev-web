@@ -13,7 +13,7 @@ const { id, href, title, body, isPrivate } = Astro.props
 ---
 
 <div
-  class="card flex flex-col rounded-lg bg-card bg-gradient-to-br from-muted/5 to-muted/60 p-3"
+  class="card flex flex-col rounded-lg border bg-card bg-gradient-to-br from-muted/5 to-muted/60 p-3"
 >
   <div class="mb-4 grow">
     <div class="flex flex-wrap items-start gap-3">
@@ -61,7 +61,7 @@ const { id, href, title, body, isPrivate } = Astro.props
     transition:
       transform 0.15s ease-out,
       box-shadow 0.15s ease-out;
-    box-shadow: 0 5px 20px 5px #00000044;
+    box-shadow: 0 5px 15px 2px hsl(0, 0%, 0%, 0.1);
   }
 </style>
 

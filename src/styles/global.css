@@ -7,11 +7,11 @@
     --accent: 43 93 57;
     --accent-foreground: 223 16 9;
 
-    --background: 0 0 85;
+    --background: 0 0 98;
     --foreground: 22 16 9;
-    --card: 0 0 85;
-    --muted: 222 13 19;
-    --muted-foreground: 220 12 38;
+    --card: 0 0 95;
+    --muted: 222 13 90;
+    --muted-foreground: 220 12 45;
     --border: 220 0 85;
     --scrollbar: 220 0 85;
   }
