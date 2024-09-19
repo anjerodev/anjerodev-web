@@ -4,7 +4,7 @@ export default {
   email: 'hello@anjero.dev',
   links: {
     github: 'https://github.com/anjerodev',
-    linkedin: 'www.linkedin.com/in/rsantoniojesus',
+    linkedin: 'https://www.linkedin.com/in/rsantoniojesus/',
   },
   technologies: [
     tech('js', 'Javascript'),
