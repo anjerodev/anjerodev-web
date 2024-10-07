@@ -74,6 +74,20 @@ export default {
   ],
   projects: [
     {
+      id: 'teammates',
+      name: 'Teammates',
+      description:
+        'The powerhouse platform for connecting visionaries and Cultivating Success.',
+      link: 'https://teammates.buildbuddy.one',
+    },
+    {
+      id: 'dotenv',
+      name: 'Dotenv',
+      description:
+        "A simple solution to share project's Environment Variables.",
+      link: 'https://dotenv.buildbuddy.one',
+    },
+    {
       id: 'jobsaun',
       name: 'Jobsaun',
       description:
@@ -100,20 +114,6 @@ export default {
       description:
         'A web application to easily rent and find available parking spots. As part of the programming team of this SaaS project designed for a Swiss startup that uses the Payrexx API for payment management.',
       link: 'https://quik.ch',
-    },
-    {
-      id: 'teammates',
-      name: 'Teammates',
-      description:
-        'The powerhouse platform for connecting visionaries and Cultivating Success.',
-      link: 'https://teammates.buildbuddy.one',
-    },
-    {
-      id: 'dotenv',
-      name: 'Dotenv',
-      description:
-        "A simple solution to share project's Environment Variables.",
-      link: 'https://dotenv.buildbuddy.one',
     },
   ],
 }
