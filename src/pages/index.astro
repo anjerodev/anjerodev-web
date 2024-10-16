@@ -6,13 +6,14 @@ import Chip from '@/components/Chip.astro'
 import ContactButton from '@/components/ContactButton.astro'
 import Toaster from '@/components/Toaster.astro'
 import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets';
 
 import config from '@/lib/site-config'
 import LabCard from '@/components/LabCard.astro'
 import Card from '@/components/Card.astro'
 import HorizontalScrollButtons from '@/components/HorizontalScrollButtons.astro'
-
-import worldMap from '@/assets/world-map.svg?raw'
+import worldMapDark from '@/assets/world-map-dark.png'
+import worldMapLight from '@/assets/world-map-light.png'
 ---
 
 <Layout>
@@ -178,7 +179,7 @@ import worldMap from '@/assets/world-map.svg?raw'
           <div class="relative mx-auto grid w-fit place-items-center">
             <!-- Location Pin -->
             <div
-              class="absolute left-[74.5%] top-[61%] flex items-center gap-2"
+              class="absolute left-[75%] top-[63%] flex items-center gap-2"
             >
               <span class="relative flex size-4 items-center justify-center">
                 <span
@@ -195,8 +196,9 @@ import worldMap from '@/assets/world-map.svg?raw'
             </div>
             <!-- Location Pin -->
 
-            <div class="text-muted">
-              <Fragment set:html={worldMap} />
+            <div>
+              <Image src={worldMapDark} alt="World map" class='dark:block hidden'/>
+              <Image src={worldMapLight} alt="World map" class='dark:hidden'/>
             </div>
           </div>
         </div>
