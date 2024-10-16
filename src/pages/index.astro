@@ -12,8 +12,8 @@ import config from '@/lib/site-config'
 import LabCard from '@/components/LabCard.astro'
 import Card from '@/components/Card.astro'
 import HorizontalScrollButtons from '@/components/HorizontalScrollButtons.astro'
-// import worldMapDark from '@/assets/world-map-dark.png'
-// import worldMapLight from '@/assets/world-map-light.png'
+import worldMapDark from '@/assets/world-map-dark.png'
+import worldMapLight from '@/assets/world-map-light.png'
 ---
 
 <Layout>
@@ -169,7 +169,41 @@ import HorizontalScrollButtons from '@/components/HorizontalScrollButtons.astro'
         </div>
       </div>
     </section>
-    
+    <section class="border-b">
+      <div class="container">
+        <div class="space-y-3 border-x px-6 py-10 lg:px-12">
+          <div class="flex items-center gap-2">
+            <Icon name="pin" class="size-6 shrink-0 text-accent" />
+            <h3 class="font-mono text-lg font-bold">LIVING IN</h3>
+          </div>
+          <div class="relative mx-auto grid w-fit place-items-center">
+            <!-- Location Pin -->
+            <div
+              class="absolute left-[75%] top-[63%] flex items-center gap-2"
+            >
+              <span class="relative flex size-4 items-center justify-center">
+                <span
+                  class="absolute inline-flex h-full w-full animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite] rounded-full bg-accent opacity-75"
+                ></span>
+                <span class="relative inline-flex size-3 rounded-full bg-accent"
+                ></span>
+              </span>
+              <div
+                class="rounded-full border bg-foreground px-2 py-0.5 text-sm text-background"
+              >
+                Thailand
+              </div>
+            </div>
+            <!-- Location Pin -->
+
+            <div>
+              <Image src={worldMapDark} alt="World map" class='dark:block hidden'/>
+              <Image src={worldMapLight} alt="World map" class='dark:hidden'/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <div class="h-14">
       <div class="container">
         <div
