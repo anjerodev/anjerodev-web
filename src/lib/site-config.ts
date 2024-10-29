@@ -84,7 +84,7 @@ export default {
       id: 'dotenv',
       name: 'Dotenv',
       description:
-        "A simple solution to share project's Environment Variables.",
+        "A simple solution to share project's Environment Variables within your team.",
       link: 'https://dotenv.buildbuddy.one',
     },
     {
@@ -98,21 +98,21 @@ export default {
       id: 'crm',
       name: 'Professional CRM',
       description:
-        'A complete dashboard for customers management, exams creation and correction, statistics for a Personal Certification Company.',
+        'An all-in-one dashboard for managing customers, analyzing statistics, as well as creating and correcting exams for a Certification Company for Individuals.',
       isPrivate: true,
     },
     {
       id: 'cwallet',
       name: 'Certificates Wallet',
       description:
-        'A PWA for customers of the Certification Company have access to their certificates and different information, push notifications and more.',
+        'A PWA allowing Certification Company customers to access their certificates, receive push notifications, and access various information more effectively.',
       isPrivate: true,
     },
     {
       id: 'quik',
       name: 'Quik',
       description:
-        'A web application to easily rent and find available parking spots. As part of the programming team of this SaaS project designed for a Swiss startup that uses the Payrexx API for payment management.',
+        'A web application designed for a Swiss startup to facilitate the easy rental and discovery of parking spots, integrated with the Payrexx API for seamless payment management.',
       link: 'https://quik.ch',
     },
   ],
