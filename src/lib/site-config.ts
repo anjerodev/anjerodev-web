@@ -26,6 +26,8 @@ export default {
     tech('sqlite', 'SQLite'),
     tech('postgresql', 'PostgreSQL'),
     tech('mongo', 'Mongo DB'),
+    tech('figma', 'Figma'),
+    tech('pempot', 'Pempot'),
   ],
   labProjects: [
     {
@@ -33,13 +35,13 @@ export default {
       name: 'Farfetchd',
       subtitle: 'API testing client',
       description: 'Simple Good Looking Online API testing client',
-      link: 'https://farfetchd.buildbuddy.one/',
+      link: 'https://farfetchd.anjero.dev',
     },
     {
       id: 'commitollama',
       name: 'Commitollama',
       subtitle: 'VS Code plugin',
-      description: 'Commits suggestions with local AI.',
+      description: 'Commits suggestions with local AI. + 2000 Installations.',
       link: 'https://github.com/JepriCreations/commitollama',
     },
     {
@@ -53,22 +55,22 @@ export default {
       id: 'snow-cone-ui',
       name: 'SnowCone UI',
       subtitle: 'React components',
-      description: 'Material 3 Design copy paste components collection.',
-      link: 'https://snow-cone-ui.buildbuddy.one',
+      description: 'Material 3 Design copy paste components collection. Radix UI based.',
+      link: 'https://snow-cone-ui.anjero.dev',
     },
     {
       id: 'mahjong',
       name: 'Solitary Mahjong',
       subtitle: 'Game',
       description: 'Have some fun playing solitary mahjong.',
-      link: 'https://mahjong.buildbuddy.one',
+      link: 'https://mahjong-beta.vercel.app',
     },
     {
       id: 'wbot',
       name: 'AI WhatsApp Bot',
       subtitle: 'AI',
       description:
-        'An AI bot for professional installers that can find answers according to regulations.',
+        '(Discontinued) An AI bot for professional installers that can find answers according to regulations.',
       link: 'https://wa.me/34622772196',
     },
   ],
@@ -78,14 +80,14 @@ export default {
       name: 'Teammates',
       description:
         'The powerhouse platform for connecting visionaries and Cultivating Success.',
-      link: 'https://teammates.buildbuddy.one',
+      link: 'https://teammates.anjero.dev',
     },
     {
       id: 'dotenv',
       name: 'Dotenv',
       description:
         "A simple solution to share project's Environment Variables within your team.",
-      link: 'https://dotenv.buildbuddy.one',
+      link: 'https://dotenv.anjero.dev',
     },
     {
       id: 'jobsaun',
