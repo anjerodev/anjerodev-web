@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --accent: 43 93 57;
-    --accent-foreground: 223 16 9;
+    --accent: 51 91 50;
+    --accent-foreground: 0 0 10;
 
     --background: 0 0 98;
     --foreground: 22 16 9;
@@ -17,8 +17,8 @@
   }
 
   .dark {
-    --accent: 53 93 57;
-    --accent-foreground: 223 16 9;
+    --accent: 51 91 50;
+    --accent-foreground: 0 0 10;
 
     --background: 223 16 9;
     --foreground: 0 0 85;
