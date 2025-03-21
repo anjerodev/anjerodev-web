@@ -42,20 +42,21 @@ export default {
       name: 'Commitollama',
       subtitle: 'VS Code plugin',
       description: 'Commits suggestions with local AI. + 2000 Installations.',
-      link: 'https://github.com/JepriCreations/commitollama',
+      link: 'https://github.com/anjerodev/commitollama',
     },
     {
       id: 'gcom',
       name: 'Gcom',
       subtitle: 'Command Line Interface',
       description: 'A CLI to assists you in the commits creations.',
-      link: 'https://github.com/JepriCreations/gcom',
+      link: 'https://github.com/anjerodev/gcom',
     },
     {
       id: 'snow-cone-ui',
       name: 'SnowCone UI',
       subtitle: 'React components',
-      description: 'Material 3 Design copy paste components collection. Radix UI based.',
+      description:
+        'Material 3 Design copy paste components collection. Radix UI based.',
       link: 'https://snow-cone-ui.anjero.dev',
     },
     {
