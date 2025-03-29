@@ -1,5 +1,29 @@
 const tech = (id: string, name: string) => ({ id, name })
 
+type Config = {
+  email: string
+  links: {
+    github: string
+    linkedin: string
+  }
+  technologies: Array<{ id: string; name: string }>
+  labProjects: Array<{
+    id: string
+    name: string
+    subtitle: string
+    description: string
+    link: string
+  }>
+  projects: Array<{
+    id: string
+    name: string
+    description: string
+    link?: string
+    isPrivate?: boolean
+    hot?: boolean
+  }>
+}
+
 export default {
   email: 'hello@anjero.dev',
   links: {
@@ -77,6 +101,14 @@ export default {
   ],
   projects: [
     {
+      id: 'mellow-email',
+      name: 'Mellow Email',
+      description:
+        'Easy-to-use email builder for developers. Built on React Email, offering powerful features and seamless integration for SaaS applications.',
+      link: 'https://mellow.email',
+      hot: true,
+    },
+    {
       id: 'teammates',
       name: 'Teammates',
       description:
@@ -119,4 +151,4 @@ export default {
       link: 'https://quik.ch',
     },
   ],
-}
+} as Config
