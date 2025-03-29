@@ -1,0 +1,182 @@
+---
+import AboutIcon from '@/icons/about.svg'
+import FunIcon from '@/icons/fun.svg'
+---
+
+<section class="border-b">
+  <div class="container">
+    <div class="space-y-6 border-x px-6 py-10 lg:px-12">
+      <div class="flex items-center gap-2">
+        <AboutIcon class="text-accent size-6 shrink-0" />
+        <h3 class="font-mono text-lg font-bold">PERSONAL ZONE</h3>
+      </div>
+      <p class="max-w-lg">
+        Well, if you've scrolled this far down, I guess I've caught your
+        attention, and now I can bore you with some history about myself.
+      </p>
+
+      <div class="relative grid grid-cols-1 md:grid-cols-2">
+        <!-- Civil Engineer Background -->
+        <div></div>
+        <div
+          class="md:border-border relative space-y-4 pb-8 md:space-y-0 md:border-l md:pl-4"
+        >
+          <div
+            class="-top-2 left-2 flex flex-row-reverse items-center justify-end gap-3 md:absolute md:-translate-x-full md:flex-row md:justify-start"
+          >
+            <span class="text-accent text-sm"> 2010 </span>
+            <div class="bg-background relative rounded-full border p-1">
+              <div class="bg-accent size-2 rounded-full"></div>
+            </div>
+          </div>
+
+          <div
+            class="group bg-card text-muted-foreground hover:bg-foreground/5 rounded-lg border p-6 transition-colors"
+          >
+            <h4 class="text-foreground mb-2 font-mono text-lg font-bold">
+              The Engineer's Path
+            </h4>
+            <div class="space-y-3">
+              <p class="text-muted-foreground">
+                I am a Civil Engineer from Spain 👷🏼‍♂️🇪🇸 turned into a Fullstack
+                Developer due to life's whims. Since the beginning, I have had
+                it in my blood to build stuff and solve problems, one way or
+                another.
+              </p>
+              <p>
+                I started my career in the "construction" sector but soon
+                discovered that it wasn't what I was expecting.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- First Developer Experience -->
+        <div
+          class="md:border-border relative space-y-4 pb-8 md:space-y-0 md:border-r md:pr-4"
+        >
+          <div
+            class="-top-2 right-2 flex items-center gap-3 md:absolute md:translate-x-full"
+          >
+            <div class="bg-background relative rounded-full border p-1">
+              <div class="bg-accent size-2 rounded-full"></div>
+            </div>
+            <span class="text-accent text-sm"> 2017 </span>
+          </div>
+          <div
+            class="group bg-card text-muted-foreground hover:bg-foreground/5 rounded-lg border p-6 transition-colors"
+          >
+            <h4 class="text-foreground mb-2 font-mono text-lg font-bold">
+              The First App
+            </h4>
+            <div class="space-y-3">
+              <p>
+                It wasn't until my second job at a town hall that I realized I
+                wasn't building anything, which is what I really wanted to do.
+                So, I thought that if they weren't going to let me build roads,
+                buildings, or anything close, I would figure out 🧠 a way to
+                build something myself.
+              </p>
+              <p>
+                That's when I developed my first mobile app using a web builder
+                that uses blocks (<span class="italic"
+                  >I think it was designed for kids</span
+                >). Nevertheless, I managed to build a super basic app for the
+                town hall to control some simple internal maintenance tasks.
+              </p>
+              <p>
+                I don't know if they used it at all; if I'm honest, I don't
+                think so, but it was enough for me to discover another way to
+                build stuff and fill that void. 🐛
+              </p>
+            </div>
+          </div>
+        </div>
+        <div></div>
+
+        <!-- The Transition -->
+        <div></div>
+        <div
+          class="md:border-border relative space-y-4 pb-8 md:space-y-0 md:border-l md:pl-4"
+        >
+          <div
+            class="-top-2 left-2 flex flex-row-reverse items-center justify-end gap-3 md:absolute md:-translate-x-full md:flex-row md:justify-start"
+          >
+            <span class="text-accent text-sm"> 2018 </span>
+            <div class="bg-background relative rounded-full border p-1">
+              <div class="bg-accent size-2 rounded-full"></div>
+            </div>
+          </div>
+          <div
+            class="group bg-card text-muted-foreground hover:bg-foreground/5 rounded-lg border p-6 transition-colors"
+          >
+            <h4 class="text-foreground mb-2 font-mono text-lg font-bold">
+              The Developer Hatching
+            </h4>
+            <div class="space-y-3">
+              <p>
+                After working in the "construction" field for a while, I don't
+                know if luck wasn't on my side, but all the work I had to do was
+                paperwork—boring and demotivating paperwork.
+              </p>
+              <p>
+                It was time to take <span class="font-bold">another road</span> in
+                my life. I embarked on an adventure to improve my English and rethink
+                my situation, which led me to travel to the other side of the world,
+                New Zealand 🛫 🌏.
+              </p>
+              <p>
+                While there, I remembered the joy of building that first app, if
+                you can call it that. It was after that, with my English now
+                improved, that long story short, through self-learning,
+                countless tutorials, deep dives into documentation, and
+                persistent practice <span class="text-accent"
+                  >I was reborn as a fullstack developer</span
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Current Status -->
+        <div class="relative space-y-4 pb-8 md:space-y-0 md:pr-4">
+          <div
+            class="-top-2 right-2 flex items-center gap-3 md:absolute md:translate-x-full"
+          >
+            <div class="bg-background relative rounded-full border p-1">
+              <div class="bg-accent size-2 rounded-full"></div>
+            </div>
+            <span class="text-accent text-sm">
+              {new Date().getFullYear()}
+            </span>
+          </div>
+          <div
+            class="group bg-card hover:bg-foreground/5 rounded-lg border p-6 transition-colors"
+          >
+            <h4 class="mb-2 font-mono text-lg font-bold">Today & Beyond</h4>
+            <p class="text-muted-foreground">
+              Now I have worked on some personal projects 🏗️, I've made
+              collaborations, created customer websites, built a CRM dashboard
+              for a company, and I am still looking for new challenges, new
+              projects, and new things to build.
+            </p>
+            <div
+              class="border-foreground/10 bg-foreground/10 mt-4 rounded-md border p-3"
+            >
+              <div class="flex items-center gap-2">
+                <FunIcon class="size-5" />
+                <span class="font-mono text-sm font-bold">FUN FACT</span>
+              </div>
+              <p class="text-foreground/70 mt-1 text-sm">
+                Just before I started my degree I only used a computer to use
+                Microsoft Messenger and send buzzes to my friends. Those early
+                2000s...
+              </p>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</section>

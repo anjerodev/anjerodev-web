@@ -1,19 +1,19 @@
 ---
-import { Icon } from 'astro-icon/components'
-
+import ExternalLinkIcon from '@/icons/external-link.svg'
 interface Props {
   id: string
   title: string
   body: string
   href?: string
   isPrivate?: boolean
+  hot?: boolean
 }
 
-const { id, href, title, body, isPrivate } = Astro.props
+const { id, href, title, body, isPrivate, hot } = Astro.props
 ---
 
 <div
-  class="card flex flex-col rounded-lg border bg-card bg-gradient-to-br from-muted/5 to-muted/60 p-3"
+  class="card bg-card from-muted/5 to-muted/60 flex flex-col rounded-lg border bg-gradient-to-br p-3"
 >
   <div class="mb-4 grow">
     <div class="flex flex-wrap items-start gap-3">
@@ -22,8 +22,15 @@ const { id, href, title, body, isPrivate } = Astro.props
       </h2>
       {
         isPrivate && (
-          <span class="rounded-full border px-2 py-0.5 text-sm text-foreground/70">
+          <span class="text-foreground/70 rounded-full border px-2 py-px text-sm">
             Private
+          </span>
+        )
+      }
+      {
+        hot && (
+          <span class="rounded-full border border-rose-500 bg-rose-500/10 px-2 py-px text-sm text-rose-500">
+            Hot
           </span>
         )
       }
@@ -37,10 +44,10 @@ const { id, href, title, body, isPrivate } = Astro.props
       <a
         href={href || `/projetcs/${id}`}
         target="_blank"
-        class="flex w-fit items-center gap-3 rounded border border-border/50 bg-transparent px-2 py-1 text-muted-foreground transition-colors duration-200 hover:border-border hover:bg-muted/50 hover:text-foreground hover:shadow-md active:shadow-none"
+        class="border-border/50 text-muted-foreground hover:border-border hover:bg-muted/50 hover:text-foreground flex w-fit items-center gap-3 rounded border bg-transparent px-2 py-1 transition-colors duration-200 hover:shadow-md active:shadow-none"
       >
         Go to project
-        {href && <Icon name="external-link" class="size-4" />}
+        {href && <ExternalLinkIcon class="size-4" />}
       </a>
     )
   }

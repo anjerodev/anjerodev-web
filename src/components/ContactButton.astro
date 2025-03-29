@@ -1,26 +1,25 @@
 ---
 import config from '@/lib/site-config'
-import { Icon } from 'astro-icon/components'
+import MailIcon from '@/icons/mail.svg'
+import CopyIcon from '@/icons/copy.svg'
 ---
 
 <button
   data-contact-button
-  class="group fixed bottom-4 right-4 flex h-12 w-full max-w-12 shrink-0 items-center justify-end gap-3 overflow-hidden rounded-full bg-accent px-3 text-accent-foreground transition-[transform,max-width] duration-300 active:scale-95"
+  class="group bg-accent text-accent-foreground fixed right-4 bottom-4 flex h-12 w-full max-w-12 shrink-0 items-center justify-end gap-3 overflow-hidden rounded-full px-3 transition-[transform,max-width] duration-300 active:scale-95"
 >
   <span
     id="email"
     data-state="hidden"
-    class="pl-1 text-sm font-medium group-hover:inline-block group-hover:duration-300 group-hover:animate-in group-hover:fade-in group-hover:slide-in-from-right-10 data-[state=hidden]:hidden data-[state=hidding]:duration-300 data-[state=hidding]:animate-out data-[state=hidding]:fade-out"
+    class="group-hover:animate-in group-hover:fade-in group-hover:slide-in-from-right-10 data-[state=hidding]:animate-out data-[state=hidding]:fade-out pl-1 text-sm font-medium group-hover:inline-block group-hover:duration-300 data-[state=hidden]:hidden data-[state=hidding]:duration-300"
   >
     {config.email}
   </span>
   <span class="relative flex size-6 shrink-0 items-center justify-center">
-    <Icon
-      name="mail"
+    <MailIcon
       class="size-6 opacity-100 transition-[opacity,transform] duration-500 group-hover:scale-0 group-hover:opacity-0"
     />
-    <Icon
-      name="copy"
+    <CopyIcon
       class="absolute size-6 scale-0 opacity-0 transition-[opacity,transform] duration-500 group-hover:scale-100 group-hover:opacity-100"
     />
   </span>

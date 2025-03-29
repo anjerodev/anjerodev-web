@@ -1,5 +1,6 @@
 ---
-import { Icon } from 'astro-icon/components'
+import ArrowLeftIcon from '@/icons/arrow-left.svg'
+import ArrowRightIcon from '@/icons/arrow-right.svg'
 
 const buttonClasses =
   'ease-[cubic-bezier(0.6,0.6,0, 1)] flex aspect-square h-10 shrink-0 cursor-pointer items-center justify-center rounded-md border border-border/50 bg-transparent text-muted-foreground transition-[border-color,color,background-color,transform] duration-300 hover:scale-[0.98] hover:border-border hover:bg-muted/50 hover:text-foreground active:scale-95'
@@ -7,10 +8,10 @@ const buttonClasses =
 
 <div class="flex items-center gap-2">
   <button data-scroll-left class={buttonClasses}>
-    <Icon name="arrow-left" class="size-6" />
+    <ArrowLeftIcon class="size-6" />
   </button>
   <button data-scroll-right class={buttonClasses}>
-    <Icon name="arrow-right" class="size-6" />
+    <ArrowRightIcon class="size-6" />
   </button>
 </div>
 

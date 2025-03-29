@@ -8,12 +8,12 @@ const { className } = Astro.props
 
 <div
   class:list={[
-    'group relative rounded-full bg-muted-foreground p-px text-muted-foreground transition-colors before:absolute before:inset-0 before:rounded-full before:bg-[hsl(var(--tech-color))] before:opacity-0 before:transition-opacity hover:bg-transparent hover:text-[hsl(var(--tech-color))] hover:before:opacity-100',
+    'group bg-muted-foreground text-muted-foreground relative rounded-full p-px transition-colors before:absolute before:inset-0 before:rounded-full before:bg-[var(--tech-color)] before:opacity-0 before:transition-opacity hover:bg-transparent hover:text-[var(--tech-color)] hover:before:opacity-100',
     className,
   ]}
 >
   <div
-    class="relative inline-flex select-none items-center rounded-full bg-background px-4 py-1 before:absolute before:inset-0 before:rounded-full before:transition-colors group-hover:border-transparent group-hover:before:bg-[hsl(var(--tech-color)/0.1)]"
+    class="bg-background relative inline-flex items-center rounded-full px-4 py-1 select-none group-hover:border-transparent before:absolute before:inset-0 before:rounded-full before:transition-colors group-hover:before:bg-[var(--tech-color)/0.1]"
   >
     <span>
       <slot />
@@ -23,105 +23,107 @@ const { className } = Astro.props
 
 <style>
   .js {
-    --tech-color: 43 93% 40%;
+    --tech-color: hsl(43 93% 40%);
   }
   .ts {
-    --tech-color: 211 60% 48%;
+    --tech-color: hsl(211 60% 48%);
   }
   .deno {
-    --tech-color: 0 0% 0%;
+    --tech-color: hsl(0 0% 0%);
   }
   .node {
-    --tech-color: 103 48% 52%;
+    --tech-color: hsl(103 48% 52%);
     &::before {
       background: linear-gradient(to right, #6cc04a, #41873f);
     }
   }
   .hono {
-    --tech-color: 25 98% 45%;
+    --tech-color: hsl(25 98% 45%);
   }
   .react {
-    --tech-color: 195 81% 43%;
+    --tech-color: hsl(195 81% 43%);
   }
-  .next, .pempot {
-    --tech-color: 0 0% 0%;
+  .next,
+  .pempot {
+    --tech-color: hsl(0 0% 0%);
   }
   .astro {
-    --tech-color: 280 76% 42%;
+    --tech-color: hsl(280 76% 42%);
     &::before {
       background: linear-gradient(to right, #1321ac, #881abd);
     }
   }
   .tailwind {
-    --tech-color: 199 94% 60%;
+    --tech-color: hsl(199 94% 60%);
   }
   .supabase {
-    --tech-color: 153 59% 55%;
+    --tech-color: hsl(153 59% 55%);
   }
   .firebase {
-    --tech-color: 10 86% 47%;
+    --tech-color: hsl(10 86% 47%);
   }
   .cloudflare {
-    --tech-color: 27 91% 56%;
+    --tech-color: hsl(27 91% 56%);
   }
   .turso {
-    --tech-color: 166 92% 30%;
+    --tech-color: hsl(166 92% 30%);
   }
   .drizzle {
-    --tech-color: 78 91% 30%;
+    --tech-color: hsl(78 91% 30%);
   }
   .sqlite {
-    --tech-color: 197 74% 53%;
+    --tech-color: hsl(197 74% 53%);
     &::before {
       background: linear-gradient(to right, #89d0ed, #3b91d5);
     }
   }
   .postgresql {
-    --tech-color: 207 44% 40%;
+    --tech-color: hsl(207 44% 40%);
   }
   .mongo {
-    --tech-color: 145 99% 30%;
+    --tech-color: hsl(145 99% 30%);
   }
   .figma {
-    --tech-color: 261 88% 60%;
+    --tech-color: hsl(261 88% 60%);
   }
   .css {
-    --tech-color: 207 44% 40%;
+    --tech-color: hsl(207 44% 40%);
   }
   .html {
-    --tech-color: 18 86% 55%;
+    --tech-color: hsl(18 86% 55%);
   }
 
   @media (prefers-color-scheme: dark) {
     .js {
-      --tech-color: 52 83% 63%;
+      --tech-color: hsl(52 83% 63%);
     }
     .deno {
-      --tech-color: 0 0% 100%;
+      --tech-color: hsl(0 0% 100%);
     }
-    .next, .pempot {
-      --tech-color: 0 0% 100%;
+    .next,
+    .pempot {
+      --tech-color: hsl(0 0% 100%);
     }
     .astro {
-      --tech-color: 280 76% 42%;
+      --tech-color: hsl(280 76% 42%);
       &::before {
         background: linear-gradient(to right, #1321ac, #881abd);
       }
     }
     .turso {
-      --tech-color: 166 92% 66%;
+      --tech-color: hsl(166 92% 66%);
     }
     .drizzle {
-      --tech-color: 78 91% 65%;
+      --tech-color: hsl(78 91% 65%);
     }
     .sqlite {
-      --tech-color: 197 74% 73%;
+      --tech-color: hsl(197 74% 73%);
       &::before {
         background: linear-gradient(to right, #89d0ed, #3b91d5);
       }
     }
     .mongo {
-      --tech-color: 145 99% 46%;
+      --tech-color: hsl(145 99% 46%);
     }
   }
 </style>

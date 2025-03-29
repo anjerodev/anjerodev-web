@@ -1,0 +1,70 @@
+---
+import SocialButton from '@/components/SocialButton.astro'
+import LinkedinIcon from '@/icons/linkedin.svg'
+import GithubIcon from '@/icons/github.svg'
+import StackIcon from '@/icons/using.svg'
+import siteConfig from '@/lib/site-config'
+import Chip from '@/components/Chip.astro'
+---
+
+<div class="border-b">
+  <div class="container grid h-8 grid-cols-3">
+    <div class="border-x"></div>
+    <div class="border-r"></div>
+    <div class="border-r"></div>
+  </div>
+</div>
+<header class="border-b">
+  <div class="container grid grid-cols-3">
+    <div
+      class="col-span-3 border-x border-b px-6 py-10 lg:col-span-2 lg:border-b-0 lg:px-12"
+    >
+      <div class="mb-7 flex items-start justify-between">
+        <h3 class="text-muted-foreground text-xl font-normal">
+          Antonio Jesús Rodríguez
+        </h3>
+      </div>
+      <div class="mb-10 space-y-3 font-mono">
+        <h1 class="text-5xl font-bold">
+          Fullstack <br />
+          <span class="text-accent">JavaScript</span> Developer
+        </h1>
+        <h2 class="text-muted-foreground text-3xl">
+          +6 years <del>of experience</del>
+          <br /> "Moviendo las manitas"
+        </h2>
+      </div>
+      <div class="flex gap-4">
+        <SocialButton
+          href={siteConfig.links.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <LinkedinIcon class="size-6" />
+        </SocialButton>
+        <SocialButton
+          href={siteConfig.links.github}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <GithubIcon class="size-6" />
+        </SocialButton>
+      </div>
+    </div>
+    <div
+      class="col-span-3 space-y-3 border-x px-6 py-10 lg:col-span-1 lg:border-r lg:border-l-0 lg:px-12"
+    >
+      <div class="flex items-center gap-2">
+        <StackIcon class="text-accent size-6 shrink-0" />
+        <h3 class="font-mono text-lg font-bold">STACK</h3>
+      </div>
+      <div class="-ml-2 flex flex-wrap gap-2">
+        {
+          siteConfig.technologies.map(({ name, id }) => (
+            <Chip className={id}>{name}</Chip>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</header>

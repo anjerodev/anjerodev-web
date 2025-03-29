@@ -11,8 +11,8 @@
     width="159"
     height="119"
     rx="11.5"
-    fill="hsl(var(--background))"
-    stroke="hsl(var(--border))"
+    fill="var(--background)"
+    stroke="var(--border)"
   ></rect>
   <rect
     x="38"

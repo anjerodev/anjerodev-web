@@ -1,6 +1,5 @@
 ---
 import { Icon } from 'astro-icon/components'
-
 interface Props {
   id: string
   title: string
@@ -16,12 +15,12 @@ const { id, href, title, subtitle, body } = Astro.props
   href={href}
   target="_blank"
   class:list={[
-    'group/card w-[380px] overflow-hidden rounded-lg border bg-card bg-gradient-to-br from-muted/30 via-card to-muted/30',
+    'group/card bg-card from-muted/30 via-card to-muted/30 w-[380px] overflow-hidden rounded-lg border bg-gradient-to-br',
     href && 'cursor-pointer',
   ]}
 >
   <div
-    class="flex h-full justify-between bg-card transition-colors group-hover/card:bg-transparent"
+    class="bg-card flex h-full justify-between transition-colors group-hover/card:bg-transparent"
   >
     <div class="flex-[0.6] shrink-0 p-4 pr-2">
       <header class="mb-2">
@@ -35,7 +34,7 @@ const { id, href, title, subtitle, body } = Astro.props
       </p>
     </div>
     <div
-      class="mt-12 flex-[0.4] origin-top-left translate-x-2 translate-y-1 rotate-6 scale-110 self-end opacity-60 transition-[transform,opacity] duration-200 group-hover/card:translate-x-0 group-hover/card:translate-y-0 group-hover/card:rotate-0 group-hover/card:opacity-100 [&_svg_.highlight]:transition-colors [&_svg_.highlight]:duration-200 group-hover/card:[&_svg_.highlight]:fill-foreground"
+      class="group-hover/card:[&_svg_.highlight]:fill-foreground mt-12 flex-[0.4] origin-top-left translate-x-2 translate-y-1 scale-110 rotate-6 self-end opacity-60 transition-[transform,opacity] duration-200 group-hover/card:translate-x-0 group-hover/card:translate-y-0 group-hover/card:rotate-0 group-hover/card:opacity-100 [&_svg_.highlight]:transition-colors [&_svg_.highlight]:duration-200"
     >
       <Icon name={`lab/${id}`} height={120} width={160} />
     </div>

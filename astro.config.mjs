@@ -1,18 +1,23 @@
 import { defineConfig } from 'astro/config'
-import tailwind from '@astrojs/tailwind'
-import icon from 'astro-icon'
 
 import vercelStatic from '@astrojs/vercel/static'
+import tailwindcss from '@tailwindcss/vite'
+import icon from 'astro-icon'
 
-// https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), icon()],
+  integrations: [icon()],
+  site: 'https://anjero.dev',
   output: 'static',
-  adapter: vercelStatic({
-    webAnalytics: {
-      enabled: true,
+
+  adapter: vercelStatic(),
+
+  experimental: {
+    svg: {
+      mode: 'sprite',
     },
-    maxDuration: 8,
-    imageService: true,
-  }),
+  },
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
 })

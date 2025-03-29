@@ -1,0 +1,40 @@
+---
+import PinIcon from '@/icons/pin.svg'
+import worldMapDark from '@/assets/world-map-dark.png'
+import worldMapLight from '@/assets/world-map-light.png'
+import { Image } from 'astro:assets'
+---
+
+<section class="border-b">
+  <div class="container">
+    <div class="space-y-3 border-x px-6 py-10 lg:px-12">
+      <div class="flex items-center gap-2">
+        <PinIcon class="text-accent size-6 shrink-0" />
+        <h3 class="font-mono text-lg font-bold">LIVING IN</h3>
+      </div>
+      <div class="relative mx-auto grid w-fit place-items-center">
+        <!-- Location Pin -->
+        <div class="absolute top-[63%] left-[75%] flex items-center gap-2">
+          <span class="relative flex size-4 items-center justify-center">
+            <span
+              class="bg-accent absolute inline-flex h-full w-full animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite] rounded-full opacity-75"
+            ></span>
+            <span class="bg-accent relative inline-flex size-3 rounded-full"
+            ></span>
+          </span>
+          <div
+            class="bg-foreground text-background rounded-full border px-2 py-0.5 text-sm"
+          >
+            Thailand
+          </div>
+        </div>
+        <!-- Location Pin -->
+
+        <div>
+          <Image src={worldMapDark} alt="World map" class="hidden dark:block" />
+          <Image src={worldMapLight} alt="World map" class="dark:hidden" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
