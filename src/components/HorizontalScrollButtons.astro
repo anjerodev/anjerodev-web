@@ -21,9 +21,9 @@ const buttonClasses =
   const $leftScrollButton = document.querySelector('[data-scroll-left]')
 
   if ($container) {
-    var scrollAmount = 0
-    var scrollMin = 0
-    var scrollMax = $container.clientWidth
+    let scrollAmount = 0
+    const scrollMin = 0
+    const scrollMax = $container.clientWidth
 
     if ($rightScrollButton) {
       $rightScrollButton.addEventListener('click', () => {

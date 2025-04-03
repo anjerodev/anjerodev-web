@@ -120,7 +120,7 @@ export const toast: ToastProps = {
           toast.style.opacity = '0'
           toast.parentNode?.removeChild(toast)
           this.options.currentToasts--
-        } catch (e) {}
+        } catch {}
         // if this was the last toast on the screen, remove the toaster
         if (this.options.currentToasts === 0) {
           const toaster = $('#toaster')

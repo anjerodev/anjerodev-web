@@ -1,13 +1,13 @@
 ---
 import { type HTMLAttributes } from 'astro/types'
 
-interface Props extends HTMLAttributes<'a'> {}
+type Props = HTMLAttributes<'a'>
 
 const props = Astro.props
 ---
 
 <a
-  class="ease-[cubic-bezier(0.6,0.6,0, 1)] flex aspect-square h-10 shrink-0 cursor-pointer items-center justify-center rounded-md border border-border/50 bg-transparent text-muted-foreground transition-[border-color,color,background-color,transform] duration-300 hover:scale-[0.98] hover:border-border hover:bg-muted/50 hover:text-foreground"
+  class="border-border/50 text-muted-foreground hover:border-border hover:bg-muted/50 hover:text-foreground flex aspect-square h-10 shrink-0 cursor-pointer items-center justify-center rounded-md border bg-transparent transition-[border-color,color,background-color,transform] duration-300 ease-[cubic-bezier(0.6,0.6,0,1)] hover:scale-[0.98]"
   {...props}
 >
   <slot />
