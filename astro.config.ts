@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config'
 
-import vercelStatic from '@astrojs/vercel/static'
+import vercel from '@astrojs/vercel'
 import tailwindcss from '@tailwindcss/vite'
 import icon from 'astro-icon'
 
@@ -9,13 +9,7 @@ export default defineConfig({
   site: 'https://anjero.dev',
   output: 'static',
 
-  adapter: vercelStatic(),
-
-  experimental: {
-    svg: {
-      mode: 'sprite',
-    },
-  },
+  adapter: vercel(),
 
   vite: {
     plugins: [tailwindcss()],
