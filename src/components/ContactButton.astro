@@ -6,7 +6,7 @@ import CopyIcon from '@/icons/copy.svg'
 
 <button
   data-contact-button
-  class="group bg-accent text-accent-foreground fixed right-4 bottom-4 flex h-12 w-full max-w-12 shrink-0 items-center justify-end gap-3 overflow-hidden rounded-full px-3 transition-[transform,max-width] duration-300 active:scale-95"
+  class="group bg-accent text-accent-foreground fixed right-4 bottom-4 flex h-12 w-full max-w-12 shrink-0 items-center justify-end gap-3 overflow-hidden rounded-full px-3 transition-[scale,max-width] duration-300 active:scale-95"
 >
   <span
     id="email"
@@ -17,10 +17,10 @@ import CopyIcon from '@/icons/copy.svg'
   </span>
   <span class="relative flex size-6 shrink-0 items-center justify-center">
     <MailIcon
-      class="size-6 opacity-100 transition-[opacity,transform] duration-500 group-hover:scale-0 group-hover:opacity-0"
+      class="size-6 opacity-100 transition-[opacity,scale] duration-500 group-hover:scale-0 group-hover:opacity-0"
     />
     <CopyIcon
-      class="absolute size-6 scale-0 opacity-0 transition-[opacity,transform] duration-500 group-hover:scale-100 group-hover:opacity-100"
+      class="absolute size-6 scale-0 opacity-0 transition-[opacity,scale] duration-500 group-hover:scale-100 group-hover:opacity-100"
     />
   </span>
 </button>
