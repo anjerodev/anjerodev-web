@@ -1,0 +1,28 @@
+---
+import Layout from '@/layouts/Layout.astro'
+
+const pageTitle = '404 – Page Not Found'
+const description = 'The page you requested could not be found.'
+---
+
+<Layout title={pageTitle} description={description}>
+  <main class="grid min-h-screen place-items-center">
+    <section class="2xl container space-y-6 text-center">
+      <div class="space-y-3">
+        <h1 class="text-4xl font-semibold tracking-tight">Page not found</h1>
+        <p class="text-muted-foreground">
+          The page you’re looking for doesn’t exist or may have been moved.
+        </p>
+      </div>
+      <div class="flex items-center justify-center gap-3">
+        <a
+          href="/"
+          class="bg-foreground text-background inline-flex items-center rounded-lg px-4 py-2"
+          aria-label="Go to Home"
+        >
+          Home
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>
