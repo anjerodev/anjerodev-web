@@ -5,7 +5,7 @@ import icon from 'astro-icon'
 
 export default defineConfig({
   integrations: [icon()],
-  site: 'https://anjero.dev',
+  site: 'https://self.anjero.dev',
   output: 'static',
   vite: {
     plugins: [tailwindcss()],
