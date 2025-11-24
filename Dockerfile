@@ -17,11 +17,9 @@ COPY . .
 ENV NODE_ENV=production
 RUN bun run build
 
-FROM base AS release
-COPY --from=install /temp/prod/node_modules node_modules
-COPY --from=prerelease /app/dist ./dist
+FROM nginx:alpine AS release
+COPY --from=prerelease /app/dist /usr/share/nginx/html
 
-ENV HOST=0.0.0.0
-ENV PORT=4321
-EXPOSE 4321
-CMD ["bun", "run", "./dist/server/entry.mjs"]
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
