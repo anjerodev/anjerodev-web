@@ -143,12 +143,12 @@ export default {
         'A PWA allowing Certification Company customers to access their certificates, receive push notifications, and access various information more effectively.',
       isPrivate: true,
     },
-    {
-      id: 'quik',
-      name: 'Quik',
-      description:
-        'A web application designed for a Swiss startup to facilitate the easy rental and discovery of parking spots, integrated with the Payrexx API for seamless payment management.',
-      link: 'https://quik.ch',
-    },
+    // {
+    //   id: 'quik',
+    //   name: 'Quik',
+    //   description:
+    //     'A web application designed for a Swiss startup to facilitate the easy rental and discovery of parking spots, integrated with the Payrexx API for seamless payment management.',
+    //   link: 'https://quik.ch',
+    // },
   ],
 } as Config
