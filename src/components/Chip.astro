@@ -8,7 +8,7 @@ const { className } = Astro.props
 
 <div
   class:list={[
-    'group bg-muted-foreground text-muted-foreground relative rounded-full p-px transition-colors before:absolute before:inset-0 before:rounded-full before:bg-[var(--tech-color)] before:opacity-0 before:transition-opacity hover:bg-transparent hover:text-[var(--tech-color)] hover:before:opacity-100',
+    'group bg-muted-foreground text-muted-foreground relative rounded-full p-px transition-colors before:absolute before:inset-0 before:rounded-full before:bg-(--tech-color) before:opacity-0 before:transition-opacity hover:bg-transparent hover:text-(--tech-color) hover:before:opacity-100',
     className,
   ]}
 >
