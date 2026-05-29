@@ -2,6 +2,12 @@
 import WorkIcon from '@/icons/work.svg'
 import siteConfig from '@/lib/site-config'
 import Card from '@/components/Card.astro'
+
+export interface HeroProps {
+  lang: 'es' | 'en'
+}
+
+const { lang } = Astro.props as HeroProps
 ---
 
 <section class="border-b">
@@ -9,7 +15,7 @@ import Card from '@/components/Card.astro'
     <!-- Dots bg -->
     <div class="absolute inset-0 z-[-1] opacity-15">
       <div
-        class="absolute h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_80%,transparent_100%)]"
+        class="absolute h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] mask-[radial-gradient(ellipse_50%_50%_at_50%_50%,#000_80%,transparent_100%)] bg-size-[16px_16px]"
       >
       </div>
     </div>
@@ -25,7 +31,11 @@ import Card from '@/components/Card.astro'
             <Card
               id={project.id}
               title={project.name}
-              body={project.description}
+              body={
+                typeof project.description === 'object'
+                  ? project.description[lang]
+                  : project.description || ''
+              }
               href={project?.link}
               isPrivate={project?.isPrivate}
               hot={project?.hot}

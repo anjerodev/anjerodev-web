@@ -1,0 +1,12 @@
+[install]
+# Save exact versions (no ^ or ~ prefixes)
+exact = true
+
+# Use the fastest registry mirror
+registry = "https://registry.npmjs.org/"
+
+# Cache settings
+cache = true
+
+# Only install package versions published at least 3 days ago
+minimumReleaseAge = 259200

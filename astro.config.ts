@@ -5,9 +5,13 @@ import icon from 'astro-icon'
 
 export default defineConfig({
   integrations: [icon()],
-  site: 'https://self.anjero.dev',
+  site: 'https://anjero.dev',
   output: 'static',
   vite: {
     plugins: [tailwindcss()],
+  },
+  i18n: {
+    locales: ['es', 'en'],
+    defaultLocale: 'en',
   },
 })

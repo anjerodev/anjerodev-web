@@ -5,6 +5,18 @@ import GithubIcon from '@/icons/github.svg'
 import StackIcon from '@/icons/using.svg'
 import siteConfig from '@/lib/site-config'
 import Chip from '@/components/Chip.astro'
+import dictionary from '@/lib/dictionary'
+
+export interface HeroProps {
+  lang: 'es' | 'en'
+}
+
+const { lang } = Astro.props as HeroProps
+
+const dict = dictionary[(lang || 'en') as 'es' | 'en'].hero as Record<
+  string,
+  string
+>
 ---
 
 <div class="border-b">
@@ -29,7 +41,9 @@ import Chip from '@/components/Chip.astro'
           Fullstack <br />
           <span class="text-accent">JavaScript</span> Developer
         </h1>
-        <h2 class="text-muted-foreground text-3xl">+6 years of experience</h2>
+        <h2 class="text-muted-foreground text-3xl">
+          {dict.experience}
+        </h2>
       </div>
       <div class="flex gap-4">
         <SocialButton

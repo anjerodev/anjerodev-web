@@ -1,0 +1,32 @@
+---
+import Layout from '@/layouts/Layout.astro'
+
+import dictionary from '@/lib/dictionary'
+
+const pageTitle = dictionary.es['404'].title
+const description = dictionary.es['404'].description
+---
+
+<Layout title={pageTitle} description={description}>
+  <main class="grid min-h-screen place-items-center">
+    <section class="2xl container space-y-6 text-center">
+      <div class="space-y-3">
+        <h1 class="text-4xl font-semibold tracking-tight">
+          {dictionary.es['404'].heading}
+        </h1>
+        <p class="text-muted-foreground">
+          {dictionary.es['404'].paragraph}
+        </p>
+      </div>
+      <div class="flex items-center justify-center gap-3">
+        <a
+          href="/es"
+          class="bg-foreground text-background inline-flex items-center rounded-lg px-4 py-2"
+          aria-label={dictionary.es['404'].button}
+        >
+          {dictionary.es['404'].button}
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>

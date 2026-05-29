@@ -1,0 +1,26 @@
+---
+import Layout from '@/layouts/Layout.astro'
+
+import ContactButton from '@/components/ContactButton.astro'
+import Toaster from '@/components/Toaster.astro'
+
+import HeroSection from '@/components/sections/hero.astro'
+import LabSection from '@/components/sections/lab.astro'
+import WorkSection from '@/components/sections/work.astro'
+import LocationSection from '@/components/sections/location.astro'
+import AboutSection from '@/components/sections/about.astro'
+import Footer from '@/components/footer.astro'
+---
+
+<Layout>
+  <main>
+    <HeroSection lang="es" />
+    <LabSection lang="es" />
+    <WorkSection lang="es" />
+    <LocationSection lang="es" />
+    <AboutSection lang="es" />
+  </main>
+  <Footer />
+  <ContactButton />
+  <Toaster />
+</Layout>

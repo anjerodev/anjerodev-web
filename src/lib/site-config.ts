@@ -10,14 +10,29 @@ type Config = {
   labProjects: Array<{
     id: string
     name: string
-    subtitle: string
-    description: string
+    subtitle:
+      | {
+          es: string
+          en: string
+        }
+      | string
+    description:
+      | {
+          es: string
+          en: string
+        }
+      | string
     link: string
   }>
   projects: Array<{
     id: string
     name: string
-    description: string
+    description:
+      | {
+          es: string
+          en: string
+        }
+      | string
     link?: string
     isPrivate?: boolean
     hot?: boolean
@@ -65,7 +80,7 @@ export default {
       id: 'commitollama',
       name: 'Commitollama',
       subtitle: 'VS Code plugin',
-      description: 'Commits suggestions with local AI. + 2000 Installations.',
+      description: 'Commits suggestions with local AI. + 3000 Installations.',
       link: 'https://github.com/anjerodev/commitollama',
     },
     {
@@ -90,14 +105,6 @@ export default {
       description: 'Have some fun playing solitary mahjong.',
       link: 'https://mahjong-beta.vercel.app',
     },
-    {
-      id: 'wbot',
-      name: 'AI WhatsApp Bot',
-      subtitle: 'AI',
-      description:
-        '(Discontinued) An AI bot for professional installers that can find answers according to regulations.',
-      link: 'https://wa.me/34622772196',
-    },
   ],
   projects: [
     {
@@ -105,22 +112,8 @@ export default {
       name: 'Mellow Email',
       description:
         'Easy-to-use email builder for developers. Built on React Email, offering powerful features and seamless integration for SaaS applications.',
-      link: 'https://mellow.email',
+      link: 'https://mellow-email.anjero.dev',
       hot: true,
-    },
-    {
-      id: 'teammates',
-      name: 'Teammates',
-      description:
-        'The powerhouse platform for connecting visionaries and Cultivating Success.',
-      link: 'https://teammates.anjero.dev',
-    },
-    {
-      id: 'dotenv',
-      name: 'Dotenv',
-      description:
-        "A simple solution to share project's Environment Variables within your team.",
-      link: 'https://dotenv.anjero.dev',
     },
     {
       id: 'jobsaun',
@@ -143,12 +136,5 @@ export default {
         'A PWA allowing Certification Company customers to access their certificates, receive push notifications, and access various information more effectively.',
       isPrivate: true,
     },
-    // {
-    //   id: 'quik',
-    //   name: 'Quik',
-    //   description:
-    //     'A web application designed for a Swiss startup to facilitate the easy rental and discovery of parking spots, integrated with the Payrexx API for seamless payment management.',
-    //   link: 'https://quik.ch',
-    // },
   ],
 } as Config
